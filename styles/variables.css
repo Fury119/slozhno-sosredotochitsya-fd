@@ -2,3 +2,21 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+
+body {
+  --padding_page-min: 0px 10px;
+  --padding_page-medium: 0px 20px;
+  --bg-color_page-dark-theme: #000028;
+  --heading__color-dark-theme: #db00ff;
+  --heading__font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --text__color-dark-theme: #FF0070;
+  --hover__color-button: rgba(255, 0, 112, 0.4);
+  --text__color-main: #f1b2ce;
+  --header2__color-dark-theme: #000028;
+  --text__font-size: 18px;
+  --font-weight-bold: 700;
+  --font-weight-regular: 400;
+  --line-height__text: 130%;
+  --backroung__image-dark: url(../images/cover-image-dark.png);
+
+}

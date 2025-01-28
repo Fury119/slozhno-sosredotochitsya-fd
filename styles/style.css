@@ -1,5 +1,402 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  width: 100%;
+  padding: var(--padding_page-min);
+  font-family: 'IBM Plex mono';
+  background-color: var(--bg-color_page-dark-theme);
+  background-image: var(--backroung__image-dark);
+  background-position: center;
+  background-attachment: fixed;
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+}
+
+.header { 
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr min-content 1fr;
+  align-items: center;
+  block-size: 100vh;
+  min-block-size: 41.75em; /*668px*/
+}
+
+
+.header__dark-decorated {
+  position: absolute;
+  top: 0.625em;
+  display: flex;
+  justify-self: end;
+  align-items: center;
+  gap: 0.625em; /*10px*/
+  margin-inline-end: 9px; /*0.5em*/
+}
+
+.header__dark-decorated::before {
+  content: "rec";
+  color: var(--text__color-dark-theme);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--text__font-size);
+  line-height: 1.388888em; /*25px*/
+  text-transform: uppercase;
+}
+
+.header__dark-decorated::after {
+  content: "";
+  display: block;
+  border-radius: 100%;
+  box-shadow: 0 0 4px 2px var(--text__color-dark-theme);
+  background-color: var(--text__color-dark-theme);
+  block-size: 0.5625em; /*9px*/
+  inline-size: 0.5625em; /*9px*/
+}
+
+.header__theme-menu {
+  justify-self: end;
+  align-self: center;
+  margin-block-start: 0.3125em; /*5px*/
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625em; /*10px*/
+}
+
+.header__theme-menu-button {
+  border: none;
+  color: var(--text__color-dark-theme);
+  font-family: 'IBM Plex mono';
+  font-weight: var(--font-weight-regular);
+  font-size: var(--text__font-size);
+  line-height: 100%;
+  text-align: center;
+  text-transform: lowercase;
+  background-color: transparent;
+  inline-size: 3.889em; /*70px*/
+  block-size: 1.4444444em; /*26px*/
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--hover__color-button);
+}
+
+.header__theme-menu-button:focus-visible {
+  border: none;
+  border-bottom: 1px solid var(--text__color-dark-theme);
+  outline: none;
+}
+
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--text__color-dark-theme);
+  pointer-events: none;
+}
+
+.header__heading {
+  color: var(--heading__color-dark-theme);
+  font-family: 'IBM Plex mono';;
+  font-weight: var(--font-weight-bold);
+  font-size: var( --heading__font-size);
+  line-height: 83%;
+  text-shadow: 4px 4px 0 var(--text__color-dark-theme);
+}
+
+.header__title {
+  align-self: center;
+  margin-block-end: 0.5555555em; /*10px;*/
+  color: var(--header2__color-dark-theme);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--text__font-size);
+  line-height: var(--line-height__text);
+}
+
+.title-decor {
+  background-color: var(--text__color-dark-theme);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 3.125em; /*50px*/
+  padding-block-start: 2.5em; /*40px*/
+}
+
+.main__section {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto-fit, minmax(24px, 1fr));
+  gap: 1.25em; /*20px*/
+}
+
+.section__gallery {
+  gap: 0.625em; /*10px*/
+}
+
+.section__title {
+  color: var(--text__color-dark-theme);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--text__font-size);
+  line-height: var(--line-height__text);
+}
+
+.section__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625em; /*10px*/
+}
+
+.section__heading {
+  color: var(--header2__color-dark-theme);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--text__font-size);
+  line-height: var(--line-height__text);
+}
+
+.section__text {
+  color: var(--text__color-main);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--text__font-size);
+  line-height: var(--line-height__text);
+}
+
+.section__text__acent {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--text__color-dark-theme);
+}
+
+.section__text__acent:hover {
+  text-decoration: underline;
+}
+
+.section__text__acent:focus {
+  border: 1px solid var(--text__color-main);
+  outline: none;
+  text-decoration: none;
+}
+
+.section__heading-text {
+  color: var(--header2__color-dark-theme);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--text__font-size);
+  line-height: var(--line-height__text);
+  inline-size: 100%;
+}
+
+.main__gallery {
+  max-inline-size: 100%;
+}
+
+.footer {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  margin-block-start: 2.75em; /*44px*/ 
+  padding: var(--padding_page);
+  block-size: 100vh;
+  min-block-size: 41.75em; /*668px*/
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  top: 0.625em; /*10px*/
+  right: 0; 
+  display: block;
+  border-top: 1px solid var(--text__color-dark-theme);
+  border-right: 1px solid var(--text__color-dark-theme);
+  inline-size: 1.5625em; /*25px*/
+  block-size: 1.5625em;/*25px*/
+}
+
+.footer__heading {
+  grid-row: 2;
+  text-align: center;
+  text-shadow: 2px 2px 0 var(--text__color-dark-theme);
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  bottom: 0.625em;
+  display: block;
+  border-bottom: 1px solid var(--text__color-dark-theme);
+  border-left: 1px solid var(--text__color-dark-theme);
+  inline-size: 1.5625em; /*25px*/
+  block-size: 1.5625em;
+}
+
+@media (width >= 768px) {
+  .page {
+    padding: var(--padding_page-medium);
+  }
+
+  .header {
+    min-block-size: 64em; /*1024px*/
+  }
+
+  .header__theme-menu {
+    margin-block-start: 1.25em; /*20px*/
+  }
+
+  .header__dark-decorated {
+   top: 1.25em; /*20px*/
+  }
+
+  .header__heading {
+    margin-inline-start: -0.167em; /*-20px*/
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__title {
+    justify-self: end;
+    margin-block-end: 1.11111em; /*20px*/
+    inline-size: 20.2em; /* 364px*/
+  }
+
+  .main {
+    gap: 3.75em; /* 60px*/
+  }
+
+  .main__section {
+    padding-block-start: 1.25em; /*20px*/
+  }
+
+  .section__change {
+    grid-template-columns: 32% 1fr;
+    gap: 1.25em; /*20px*/
+  }
+
+  .section__title {
+    align-self: start;
+  }
+
+  .section__group__change {
+    grid-column: 2;
+  }
+
+  .section__heading {
+    inline-size: 100%;
+    max-block-size: 1.2777777em; /*23px*/
+  }
+  
+  .section__title {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    max-inline-size: 13.1111em; /*236px*/
+  }
+
+  .section__gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.25em; /*1.25em*/
+    padding: 0;
+    padding-block-start: 1.25em;/*1.25em*/
+  }
+
+  .heading__gallery {
+    grid-column: 1/4;
+  }
+
+  .image__sunset {
+    grid-column: 1/3;
+  }
+
+  .image__ice-cream {
+    grid-column: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    object-fit: cover;
+    block-size: 100%;
+  }
+
+  .image__tape {
+    grid-column: 1;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    object-fit: cover;
+    block-size: 100%;
+  }
+  
+  .image__street {
+    grid-column: 2/4;
+    grid-row: auto;
+    object-fit: cover;
+    block-size: 100%;
+  }
+
+  .footer {
+    margin-block-start: 3.75em; /*60px;*/
+    min-block-size: 64em; /*1024px*/
+  }
+
+  .footer__heading {
+    margin-inline-start: 0;
+    text-align: center;
+  }
+
+  .decorated-zone::before {
+    top: 1.25em; /*1.25em*/
+  }
+    
+
+  .decorated-zone::after {
+    bottom: 1.25em; /* 20px*/
+  }
+}
+
+
+@media (width >= 1024px) {
+
+  .header {
+    min-block-size: 48em; /*768px*/
+  }
+
+  .header__theme-menu {
+    justify-self: center;
+    align-self: start;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .header__heading {
+    align-self: center;
+    margin-inline-start: -0.1273885em; /*-20px*/
+  }
+
+  .header__title {
+    min-inline-size: 27.277778em; /*491px*/
+  }
+
+  .main__section {
+    padding-block-start: 1.25em; /*20px*/
+  }
+
+  .section__change-article {
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    grid-template-rows: 1fr auto;
+  }
+
+  .title__change-article {
+    grid-column: 1/4;
+    grid-row: 1;
+  }
+
+  .group__change-article {
+    grid-row: 2;
+  }
+
+  .section__title {
+    max-inline-size: 17.5em; /*315px*/
+  }
+
+  .footer {
+    min-block-size: 48em; /*768px*/
+  }
+
+  .footer__heading {
+    margin-inline-start: 0;
+  }
+
 }
