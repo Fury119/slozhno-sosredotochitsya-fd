@@ -11,7 +11,7 @@
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
 
-.header { 
+.header {
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
@@ -95,7 +95,7 @@
 
 .header__heading {
   color: var(--heading__color-dark-theme);
-  font-family: 'IBM Plex mono';;
+  font-family: 'IBM Plex mono';
   font-weight: var(--font-weight-bold);
   font-size: var( --heading__font-size);
   line-height: 83%;
@@ -200,7 +200,7 @@
 .decorated-zone::before {
   content: "";
   position: absolute;
-  top: 0.625em; /*10px*/
+  top: 0.625em;/*10px*/
   right: 0; 
   display: block;
   border-top: 1px solid var(--text__color-dark-theme);
@@ -269,6 +269,9 @@
 
   .section__title {
     align-self: start;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    max-inline-size: 13.1111em; /*236px*/
   }
 
   .section__group__change {
@@ -279,13 +282,7 @@
     inline-size: 100%;
     max-block-size: 1.2777777em; /*23px*/
   }
-  
-  .section__title {
-    grid-row-start: 1;
-    grid-row-end: 3;
-    max-inline-size: 13.1111em; /*236px*/
-  }
-
+ 
   .section__gallery {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1.25em; /*1.25em*/

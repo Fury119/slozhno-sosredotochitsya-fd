@@ -92,7 +92,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-  :root.theme-light {
+  :root {
     --bg-color_page-light-theme: #F5F5F5;
     --accent__color-light-theme: #FF8DCB;
     --backroung__image-light: url(../images/cover-image-light.png);
