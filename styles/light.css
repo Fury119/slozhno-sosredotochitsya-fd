@@ -46,19 +46,37 @@
 
 
 @media (prefers-color-scheme: light) {
-  :root.theme-light {
+  :root {
     --bg-color_page: #F5F5F5;
     --heading__color: #ffc2e6;
     --accent__color: #FF8DCB;
     --backroung__image: url(../images/cover-image-light.png);
     --hover__color-button: rgba(50, 49, 45, 0.4);
     --text__color-main: #353430;
+    --text__color_accent: #353430;
   }
 
-  .section__text {
-    color: var(--text__color);
-}
-
+  .header__dark-decorated::before {
+    display: none;
+  }
+  
+  .header__dark-decorated::after {
+    display: none;
+  }
+  
+  .section__text__acent:focus {
+    border: 1px solid var(--accent__color);
+  }
+  
+  .header__heading {
+    color: var(--heading__color);
+    text-shadow: 4px 4px 0 var(--accent__color);
+  }
+  
+  .title-decor {
+    background-color: var(--accent__color);
+  }
+  
   .section__text__acent {
     text-shadow: 2px 2px 0 var(--accent__color);
   }
