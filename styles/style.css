@@ -1,13 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-body {
-  margin: 0;
-  padding: 0;
-}
-
 
 .page {
   width: 100%;
-  padding: var(--padding_page-min);
   font-family: 'IBM Plex mono';
   background-color: var(--bg-color_page);
   background-image: var(--backroung__image);
@@ -24,12 +18,14 @@ body {
   align-items: center;
   block-size: 100vh;
   min-block-size: 41.75em; /*668px*/
+  padding: var(--padding_page-min);
 }
 
 
 .header__dark-decorated {
   position: absolute;
   top: 0.625em;
+  right: 0.625em;
   display: flex;
   justify-self: end;
   align-items: center;
@@ -124,6 +120,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 3.125em; /*50px*/
+  padding: var(--padding_page-min);
   padding-block-start: 2.5em; /*40px*/
 }
 
@@ -200,13 +197,14 @@ body {
   padding: var(--padding_page);
   block-size: 100vh;
   min-block-size: 41.75em; /*668px*/
+  padding: var(--padding_page-min);
 }
 
 .decorated-zone::before {
   content: "";
   position: absolute;
   top: 0.625em;/*10px*/
-  right: 0;
+  right: 0.625em;
   display: block;
   border-top: 1px solid var(--text__color_accent);
   border-right: 1px solid var(--text__color_accent);
@@ -224,6 +222,7 @@ body {
   content: "";
   position: absolute;
   bottom: 0.625em;
+  left: 0.625em;
   display: block;
   border-bottom: 1px solid var(--text__color_accent);
   border-left: 1px solid var(--text__color_accent);
@@ -232,11 +231,9 @@ body {
 }
 
 @media (width >= 768px) {
-  .page {
-    padding: var(--padding_page-medium);
-  }
-
+ 
   .header {
+    padding: var(--padding_page-medium);
     min-block-size: 64em; /*1024px*/
   }
 
@@ -246,6 +243,7 @@ body {
 
   .header__dark-decorated {
    top: 1.25em; /*20px*/
+   right: 1.25em;
   }
 
   .header__heading {
@@ -260,6 +258,7 @@ body {
   }
 
   .main {
+    padding: var(--padding_page-medium);
     gap: 3.75em; /* 60px*/
   }
 
@@ -327,6 +326,7 @@ body {
   }
 
   .footer {
+    padding: var(--padding_page-medium);
     margin-block-start: 3.75em; /*60px;*/
     min-block-size: 64em; /*1024px*/
   }
@@ -338,11 +338,13 @@ body {
 
   .decorated-zone::before {
     top: 1.25em; /*1.25em*/
+    right: 1.25em;
   }
     
 
   .decorated-zone::after {
     bottom: 1.25em; /* 20px*/
+    left: 1.25em;
   }
 }
 
