@@ -9,24 +9,24 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  --bg-color_page-dark-theme: #000028;
-  --heading__color-dark-theme: #db00ff;
-  --text__color-dark-theme: #FF0070;
+  --bg-color_page: #000028;
+  --heading__color: #db00ff;
+  --text__color_accent: #FF0070;
   --hover__color-button: rgba(255, 0, 112, 0.4);
   --text__color-main: #f1b2ce;
-  --header2__color-dark-theme: #000028;
-  --backroung__image-dark: url(../images/cover-image-dark.png);
+  --header2__color: #000028;
+  --backroung__image: url(../images/cover-image-dark.png);
 }
 
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-color_page-dark-theme: #000028;
-    --heading__color-dark-theme: #db00ff;
-    --text__color-dark-theme: #FF0070;
+    --bg-color_page: #000028;
+    --heading__color: #db00ff;
+    --text__color_accent: #FF0070;
     --hover__color-button: rgba(255, 0, 112, 0.4);
     --text__color-main: #f1b2ce;
-    --header2__color-dark-theme: #000028;
-    --backroung__image-dark: url(../images/cover-image-dark.png);
+    --header2__color: #000028;
+    --backroung__image: url(../images/cover-image-dark.png);
   }
 }

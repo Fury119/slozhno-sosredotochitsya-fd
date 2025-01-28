@@ -9,20 +9,15 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  --bg-color_page-light-theme: #F5F5F5;
-  --accent__color-light-theme: #FF8DCB;
-  --backroung__image-light: url(../images/cover-image-light.png);
-  --text__color-light-theme: #353430;
-  --hover__color-button-light: rgba(50, 49, 45, 0.4);
-  --heading__color-light-theme: #ffc2e6;
+  --bg-color_page: #F5F5F5;
+  --heading__color: #ffc2e6;
+  --accent__color: #FF8DCB;
+  --backroung__image: url(../images/cover-image-light.png);
+  --text__color_accent: #353430;
+  --hover__color-button: rgba(50, 49, 45, 0.4);
+  --text__color-main: #353430;
 }
 
-.theme-light .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
-  background-color: var(--bg-color_page-light-theme);
-  background-image: var(--backroung__image-light);
-  /*color: var(--text__color-light-theme);*/
-}
 
 .theme-light .header__dark-decorated::before {
   display: none;
@@ -32,144 +27,40 @@
   display: none;
 }
 
-.theme-light .header__theme-menu-button {
-  color: var(--text__color-light-theme);
-}
-
-.theme-light .header__theme-menu-button:hover {
-  border: 1px solid var(--hover__color-button-light);
-}
-
-.theme-light .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--text__color-light-theme);
-}
-
-.theme-light .header__theme-menu-button_active {
-  border: 1px solid var(--text__color-light-theme);
+.theme-light .section__text__acent:focus {
+  border: 1px solid var(--accent__color);
 }
 
 .theme-light .header__heading {
-  color: var(--heading__color-light-theme);
-  text-shadow: 4px 4px 0 var(--accent__color-light-theme);
+  color: var(--heading__color);
+  text-shadow: 4px 4px 0 var(--accent__color);
 }
-
-.theme-light .header__title {
-  color: var(--text__color-light-theme);
-} 
 
 .theme-light .title-decor {
-  background-color: var(--accent__color-light-theme);
-}
-
-.theme-light .section__title {
-  color: var(--text__color-light-theme);
-}
-
-.theme-light .section__heading {
-  color: var(--text__color-light-theme);
+  background-color: var(--accent__color);
 }
 
 .theme-light .section__text__acent {
-  text-shadow: 2px 2px 0 var(--accent__color-light-theme);
+  text-shadow: 2px 2px 0 var(--accent__color);
 }
 
-.section__text__acent:focus {
-  border: 1px solid var(--text__color-light-theme);
-}
-
-.theme-light .section__text {
-  color: var(--text__color-light-theme);
-}
-
-.theme-light .decorated-zone::before {
-  border-top: 1px solid var(--text__color-light-theme);
-  border-right: 1px solid var(--text__color-light-theme);
-}
-
-.theme-light .decorated-zone::after {
-  border-bottom: 1px solid var(--text__color-light-theme);
-  border-left: 1px solid var(--text__color-light-theme);
-}
 
 @media (prefers-color-scheme: light) {
-  :root {
-    --bg-color_page-light-theme: #F5F5F5;
-    --accent__color-light-theme: #FF8DCB;
-    --backroung__image-light: url(../images/cover-image-light.png);
-    --text__color-light-theme: #353430;
-    --hover__color-button-light: rgba(50, 49, 45, 0.4);
-    --heading__color-light-theme: #ffc2e6;
+  :root.theme-light {
+    --bg-color_page: #F5F5F5;
+    --heading__color: #ffc2e6;
+    --accent__color: #FF8DCB;
+    --backroung__image: url(../images/cover-image-light.png);
+    --hover__color-button: rgba(50, 49, 45, 0.4);
+    --text__color-main: #353430;
+  }
+
+  .section__text {
+    color: var(--text__color);
+}
+
+  .section__text__acent {
+    text-shadow: 2px 2px 0 var(--accent__color);
   }
   
-  .theme-light .page {
-    background-color: var(--bg-color_page-light-theme);
-    background-image: var(--backroung__image-light);
-  }
-  
-  .theme-light .header__dark-decorated::before {
-    display: none;
-  }
-  
-  .theme-light .header__dark-decorated::after {
-    display: none;
-  }
-  
-  .theme-light .header__theme-menu-button {
-    color: var(--text__color-light-theme);
-  }
-  
-  .theme-light .header__theme-menu-button:hover {
-    border: 1px solid var(--hover__color-button-light);
-  }
-  
-  .theme-light .header__theme-menu-button:focus-visible {
-    border-bottom: 1px solid var(--text__color-light-theme);
-  }
-  
-  .theme-light .header__theme-menu-button_active {
-    border: 1px solid var(--text__color-light-theme);
-  }
-  
-  .theme-light .header__heading {
-    color: var(--heading__color-light-theme);
-    text-shadow: 4px 4px 0 var(--accent__color-light-theme);
-  }
-  
-  .theme-light .header__title {
-    color: var(--text__color-light-theme);
-  } 
-  
-  .theme-light .title-decor {
-    background-color: var(--accent__color-light-theme);
-  }
-  
-  .theme-light .section__title {
-    color: var(--text__color-light-theme);
-  }
-  
-  .theme-light .section__heading {
-    color: var(--text__color-light-theme);
-  }
-  
-  .theme-light .section__text__acent {
-    text-shadow: 2px 2px 0 var(--accent__color-light-theme);
-  }
-  
-  .section__text__acent:focus {
-    border: 1px solid var(--text__color-light-theme);
-  }
-  
-  .theme-light .section__text {
-    color: var(--text__color-light-theme);
-  }
-  
-  .theme-light .decorated-zone::before {
-    border-top: 1px solid var(--text__color-light-theme);
-    border-right: 1px solid var(--text__color-light-theme);
-  }
-  
-  .theme-light .decorated-zone::after {
-    border-bottom: 1px solid var(--text__color-light-theme);
-    border-left: 1px solid var(--text__color-light-theme);
-  }
 }
