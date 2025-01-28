@@ -191,7 +191,7 @@
   position: relative;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
-  margin-block-start: 2.75em; /*44px*/ 
+  margin-block-start: 2.75em;/*44px*/
   padding: var(--padding_page);
   block-size: 100vh;
   min-block-size: 41.75em; /*668px*/
@@ -201,7 +201,7 @@
   content: "";
   position: absolute;
   top: 0.625em;/*10px*/
-  right: 0; 
+  right: 0;
   display: block;
   border-top: 1px solid var(--text__color-dark-theme);
   border-right: 1px solid var(--text__color-dark-theme);
