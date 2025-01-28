@@ -121,7 +121,7 @@
   flex-direction: column;
   gap: 3.125em; /*50px*/
   padding: var(--padding_page-min);
-  padding-block-start: 2.5em; /*40px*/
+  margin-block-start: 2.5em; /*40px*/
 }
 
 .main__section {
@@ -194,10 +194,9 @@
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   margin-block-start: 2.75em;/*44px*/
-  padding: var(--padding_page);
+  padding: var(--padding_page-min);
   block-size: 100vh;
   min-block-size: 41.75em; /*668px*/
-  padding: var(--padding_page-min);
 }
 
 .decorated-zone::before {
