@@ -4,10 +4,9 @@
 */
 
 body {
-  --padding_page-min: 0px 10px;
-  --padding_page-medium: 0px 20px;
-  --heading__font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  --text__font-size: 18px;
+  --padding_page: 0px 10px;
+  --font-size__heading: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --font-size__text: 18px;
   --font-weight-bold: 700;
   --font-weight-regular: 400;
   --line-height__text: 130%;

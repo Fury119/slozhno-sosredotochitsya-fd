@@ -12,18 +12,27 @@
   --bg-color_page: #000028;
   --heading__color: #db00ff;
   --text__color_accent: #FF0070;
+  --color-accent-element: #FF0070;
   --hover__color-button: rgba(255, 0, 112, 0.4);
   --text__color-main: #f1b2ce;
   --header2__color: #000028;
   --backroung__image: url(../images/cover-image-dark.png);
 }
 
+.theme-dark .header__dark-decorated::before {
+  display: block;
+}
+
+.theme-dark .header__dark-decorated::after {
+  display: block;
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-color_page: #000028;
     --heading__color: #db00ff;
     --text__color_accent: #FF0070;
+    --color-accent-element: #FF0070;
     --hover__color-button: rgba(255, 0, 112, 0.4);
     --text__color-main: #f1b2ce;
     --header2__color: #000028;

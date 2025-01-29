@@ -2,9 +2,10 @@
 
 .page {
   width: 100%;
-  font-family: 'IBM Plex mono';
+  font-family: 'IBM Plex mono', monospace;
   background-color: var(--bg-color_page);
   background-image: var(--backroung__image);
+  background-size: cover;
   background-position: center;
   background-attachment: fixed;
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
@@ -18,7 +19,7 @@
   align-items: center;
   block-size: 100vh;
   min-block-size: 41.75em; /*668px*/
-  padding: var(--padding_page-min);
+  padding: var(--padding_page);
 }
 
 
@@ -37,7 +38,7 @@
   content: "rec";
   color: var(--text__color_accent);
   font-weight: var(--font-weight-regular);
-  font-size: var(--text__font-size);
+  font-size: var(--font-size__text);
   line-height: 1.388888em; /*25px*/
   text-transform: uppercase;
 }
@@ -66,16 +67,17 @@
 
 .header__theme-menu-button {
   border: none;
-  color: var(--text__color_accent);
-  font-family: 'IBM Plex mono';
+  color: var(--color-accent-element);
+  font-family: 'IBM Plex mono', monospace;
   font-weight: var(--font-weight-regular);
-  font-size: var(--text__font-size);
+  font-size: var(--font-size__text);
   line-height: 100%;
   text-align: center;
   text-transform: lowercase;
   background-color: transparent;
   inline-size: 3.889em; /*70px*/
   block-size: 1.4444444em; /*26px*/
+  cursor: pointer;
 }
 
 .header__theme-menu-button:hover {
@@ -84,21 +86,21 @@
 
 .header__theme-menu-button:focus-visible {
   border: none;
-  border-bottom: 1px solid var(--text__color_accent);
+  border-bottom: 1px solid var(--color-accent-element);
   outline: none;
 }
 
 
 .header__theme-menu-button_active {
-  outline: 1px solid var(--text__color_accent);
+  outline: 1px solid var(--color-accent-element);
   pointer-events: none;
 }
 
-.header__heading {
+.heading {
   color: var(--heading__color);
-  font-family: 'IBM Plex mono';
+  font-family: 'IBM Plex mono', monospace;
   font-weight: var(--font-weight-bold);
-  font-size: var( --heading__font-size);
+  font-size: var(--font-size__heading);
   line-height: 83%;
   text-shadow: 4px 4px 0 var(--text__color_accent);
 }
@@ -108,7 +110,7 @@
   margin-block-end: 0.5555555em; /*10px;*/
   color: var(--header2__color);
   font-weight: var(--font-weight-bold);
-  font-size: var(--text__font-size);
+  font-size: var(--font-size__text);
   line-height: var(--line-height__text);
 }
 
@@ -120,7 +122,7 @@
   display: flex;
   flex-direction: column;
   gap: 3.125em; /*50px*/
-  padding: var(--padding_page-min);
+  padding: var(--padding_page);
   margin-block-start: 2.5em; /*40px*/
 }
 
@@ -131,14 +133,21 @@
   gap: 1.25em; /*20px*/
 }
 
+.section__article {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25em; /*20px*/
+}
+
+
 .section__gallery {
   gap: 0.625em; /*10px*/
 }
 
 .section__title {
-  color: var(--text__color_accent);
+  color: var(--color-accent-element);
   font-weight: var(--font-weight-bold);
-  font-size: var(--text__font-size);
+  font-size: var(--font-size__text);
   line-height: var(--line-height__text);
 }
 
@@ -151,14 +160,14 @@
 .section__heading {
   color: var(--header2__color);
   font-weight: var(--font-weight-bold);
-  font-size: var(--text__font-size);
+  font-size: var(--font-size__text);
   line-height: var(--line-height__text);
 }
 
 .section__text {
   color: var(--text__color-main);
   font-weight: var(--font-weight-regular);
-  font-size: var(--text__font-size);
+  font-size: var(--font-size__text);
   line-height: var(--line-height__text);
 }
 
@@ -168,7 +177,7 @@
 }
 
 .section__text__acent:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid var(--text__color-main);
 }
 
 .section__text__acent:focus {
@@ -180,13 +189,13 @@
 .section__heading-text {
   color: var(--header2__color);
   font-weight: var(--font-weight-regular);
-  font-size: var(--text__font-size);
+  font-size: var(--font-size__text);
   line-height: var(--line-height__text);
   inline-size: 100%;
 }
 
 .main__gallery {
-  max-inline-size: 100%;
+  inline-size: 100%;
 }
 
 .footer {
@@ -194,7 +203,7 @@
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   margin-block-start: 2.75em;/*44px*/
-  padding: var(--padding_page-min);
+  padding: var(--padding_page);
   block-size: 100vh;
   min-block-size: 41.75em; /*668px*/
 }
@@ -205,8 +214,8 @@
   top: 0.625em;/*10px*/
   right: 0.625em;
   display: block;
-  border-top: 1px solid var(--text__color_accent);
-  border-right: 1px solid var(--text__color_accent);
+  border-top: 1px solid var(--color-accent-element);
+  border-right: 1px solid var(--color-accent-element);
   inline-size: 1.5625em; /*25px*/
   block-size: 1.5625em;/*25px*/
 }
@@ -223,8 +232,8 @@
   bottom: 0.625em;
   left: 0.625em;
   display: block;
-  border-bottom: 1px solid var(--text__color_accent);
-  border-left: 1px solid var(--text__color_accent);
+  border-bottom: 1px solid var(--color-accent-element);
+  border-left: 1px solid var(--color-accent-element);
   inline-size: 1.5625em; /*25px*/
   block-size: 1.5625em;
 }
@@ -232,8 +241,8 @@
 @media (width >= 768px) {
  
   .header {
-    padding: var(--padding_page-medium);
-    min-block-size: 64em; /*1024px*/
+    --padding_page: 0px 20px;
+    padding: var(--padding_page);
   }
 
   .header__theme-menu {
@@ -245,7 +254,7 @@
    right: 1.25em;
   }
 
-  .header__heading {
+  .heading {
     margin-inline-start: -0.167em; /*-20px*/
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
@@ -257,7 +266,8 @@
   }
 
   .main {
-    padding: var(--padding_page-medium);
+    --padding_page: 0px 20px;
+    padding: var(--padding_page);
     gap: 3.75em; /* 60px*/
   }
 
@@ -272,8 +282,6 @@
 
   .section__title {
     align-self: start;
-    grid-row-start: 1;
-    grid-row-end: 3;
     max-inline-size: 13.1111em; /*236px*/
   }
 
@@ -283,7 +291,6 @@
 
   .section__heading {
     inline-size: 100%;
-    max-block-size: 1.2777777em; /*23px*/
   }
  
   .section__gallery {
@@ -325,9 +332,9 @@
   }
 
   .footer {
-    padding: var(--padding_page-medium);
+    --padding_page: 0px 20px;
+    padding: var(--padding_page);
     margin-block-start: 3.75em; /*60px;*/
-    min-block-size: 64em; /*1024px*/
   }
 
   .footer__heading {
@@ -350,10 +357,6 @@
 
 @media (width >= 1024px) {
 
-  .header {
-    min-block-size: 48em; /*768px*/
-  }
-
   .header__theme-menu {
     justify-self: center;
     align-self: start;
@@ -363,7 +366,7 @@
     flex-direction: row;
   }
 
-  .header__heading {
+  .heading {
     align-self: center;
     margin-inline-start: -0.1273885em; /*-20px*/
   }
@@ -392,10 +395,6 @@
 
   .section__title {
     max-inline-size: 17.5em; /*315px*/
-  }
-
-  .footer {
-    min-block-size: 48em; /*768px*/
   }
 
   .footer__heading {
