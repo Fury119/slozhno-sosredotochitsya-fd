@@ -9,13 +9,13 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  --bg-color_page: #fff1f7;
-  --heading__color: #ffc2e6;
-  --accent__color: #FF8DCB;
-  --backroung__image: url(../images/cover-image-light.png);
-  --text__color_accent: #FF8DCB;
-  --hover__color-button: rgba(50, 49, 45, 0.4);
-  --text__color-main: #353430;
+  --bg-color-page: #fff1f7;
+  --heading-color: #ffc2e6;
+  --accent-color: #FF8DCB;
+  --backroung-image: url(../images/cover-image-light.png);
+  --text-color-accent: #FF8DCB;
+  --hover-color-button: rgba(50, 49, 45, 0.4);
+  --text-color-main: #353430;
   --color-accent-element: #353430;
 }
 
@@ -30,13 +30,13 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --bg-color_page: #fff1f7;
-    --heading__color: #ffc2e6;
-    --accent__color: #FF8DCB;
-    --backroung__image: url(../images/cover-image-light.png);
-    --hover__color-button: rgba(50, 49, 45, 0.4);
-    --text__color-main: #353430;
-    --text__color_accent: #FF8DCB;
+    --bg-colo-page: #fff1f7;
+    --heading-color: #ffc2e6;
+    --accent-color: #FF8DCB;
+    --backroung-image: url(../images/cover-image-light.png);
+    --hover-color-button: rgba(50, 49, 45, 0.4);
+    --text-color-main: #353430;
+    --text-color-accent: #FF8DCB;
     --color-accent-element: #353430;
   }
 
