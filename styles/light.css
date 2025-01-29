@@ -20,11 +20,11 @@
 }
 
 
-.theme-light .header__dark-decorated::before  {
+.theme-light .header__dark-decorated::before {
   display: none;
 }
 
-.theme-light .header__dark-decorated::after  {
+.theme-light .header__dark-decorated::after {
   display: none;
 }
 
